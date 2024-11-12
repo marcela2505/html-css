@@ -27,11 +27,24 @@
         }
 
         thead, tfoot {
-            background-color: gray;
+            background-color: #383838;
             color: white;
         }
 
-        .num {
+        /*
+        Valores aceitos pela pseudoclasse ":nth-child()"
+            - even/odd
+            - 2n/3n/4n...
+            - 2n - 1
+        */
+        tbody > tr:nth-child(odd) { /* 2n-1 */
+            background-color: white;
+        }
+        tbody > tr:nth-child(even) { /* 2n */
+            background-color: lightgray;
+        }
+
+        td.num {
             text-align: right;
         }
     </style>
